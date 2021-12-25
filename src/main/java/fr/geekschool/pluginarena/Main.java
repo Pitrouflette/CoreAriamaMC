@@ -78,6 +78,7 @@ public final class Main extends JavaPlugin {
         getCommand("sword").setExecutor(new SwordCommand());
         getCommand("custom-craft").setExecutor(new CustomCraftCommand());
         getCommand("presse").setExecutor(new PresseCommand());
+        getCommand("odysseyus").setExecutor(new OdysseyusHelpCommand());
         
         backpackManager = new BackpackManager();
 
