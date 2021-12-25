@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="pluginArena:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pluginArena_jar</output-path>
+    <root id="archive" name="pluginArena.jar">
+      <element id="module-output" name="pluginArena" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20180130/json-20180130.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
