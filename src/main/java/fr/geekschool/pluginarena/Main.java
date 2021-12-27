@@ -63,6 +63,7 @@ public final class Main extends JavaPlugin {
         manager.registerEvents(new onUsePitrouTools(), this);
         manager.registerEvents(new onClickCustomCraftInv(), this);
         manager.registerEvents(new onRightClickPresse(), this);
+        manager.registerEvents(new ClickHelpOdysseyusPage(), this);
 
         getCommand("hotte").setExecutor(new BackpackCommand());
         getCommand("cadeau").setExecutor(new CadeauCommand());

@@ -33,26 +33,38 @@ public class OdysseyusHelpCommand implements CommandExecutor {
             ItemMeta factionM = faction.getItemMeta();
             factionM.setDisplayName("Help Faction (/f help)");
             factionM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            factionM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             factionM.addEnchant(Enchantment.DURABILITY, 1, true);
             faction.setItemMeta(factionM);
 
             //Item HelpEntreprise
-            ItemStack enter = new ItemStack(Material.DIAMOND_SWORD);
+            ItemStack enter = new ItemStack(Material.GOLD_INGOT);
             ItemMeta enterM = faction.getItemMeta();
-            enterM.setDisplayName("Help Entreprises (/companies)");
+            enterM.setDisplayName("Help Entreprises (/companies help)");
             enterM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             enterM.addEnchant(Enchantment.DURABILITY, 1, true);
-            enter.setItemMeta(factionM);
+            enter.setItemMeta(enterM);
+
+            //Item HelpJobs
+            ItemStack Jobs = new ItemStack(Material.DIAMOND_HOE);
+            ItemMeta JobsM = Jobs.getItemMeta();
+            JobsM.setDisplayName("Help Jobs (/jobs help)");
+            JobsM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            JobsM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            JobsM.addEnchant(Enchantment.DURABILITY, 1, true);
+            Jobs.setItemMeta(JobsM);
 
             inv.setItem(0, border);
-            inv.setItem(2, border);
+            inv.setItem(1, border);
+            inv.setItem(2, faction);
             inv.setItem(3, border);
-            inv.setItem(4, border);
+            inv.setItem(4, enter);
             inv.setItem(5, border);
-            inv.setItem(6, border);
+            inv.setItem(6, Jobs);
             inv.setItem(7, border);
             inv.setItem(8, border);
-            sender.sendMessage("OdysseyusHelp page");
+
+            ((Player) sender).openInventory(inv);
         }
 
         return true;

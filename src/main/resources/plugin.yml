@@ -56,3 +56,5 @@ commands:
     description: ouvre une table de craft custom
   presse:
     description: donne l'équipement de journaliste
+  odysseyus:
+    description: ouvre le menu d'aide d'Odysseyus
