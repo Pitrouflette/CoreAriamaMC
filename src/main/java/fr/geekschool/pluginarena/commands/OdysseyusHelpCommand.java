@@ -28,6 +28,22 @@ public class OdysseyusHelpCommand implements CommandExecutor {
             borderM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             border.setItemMeta(borderM);
 
+            //Item HelpFaction
+            ItemStack faction = new ItemStack(Material.DIAMOND_SWORD);
+            ItemMeta factionM = faction.getItemMeta();
+            factionM.setDisplayName("Help Faction (/f help)");
+            factionM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            factionM.addEnchant(Enchantment.DURABILITY, 1, true);
+            faction.setItemMeta(factionM);
+
+            //Item HelpEntreprise
+            ItemStack enter = new ItemStack(Material.DIAMOND_SWORD);
+            ItemMeta enterM = faction.getItemMeta();
+            enterM.setDisplayName("Help Entreprises (/companies)");
+            enterM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            enterM.addEnchant(Enchantment.DURABILITY, 1, true);
+            enter.setItemMeta(factionM);
+
             inv.setItem(0, border);
             inv.setItem(2, border);
             inv.setItem(3, border);
