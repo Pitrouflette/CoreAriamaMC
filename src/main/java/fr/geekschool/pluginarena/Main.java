@@ -80,6 +80,8 @@ public final class Main extends JavaPlugin {
         getCommand("custom-craft").setExecutor(new CustomCraftCommand());
         getCommand("presse").setExecutor(new PresseCommand());
         getCommand("odysseyus").setExecutor(new OdysseyusHelpCommand());
+        getCommand("vote").setExecutor(new VoteCommand());
+        getCommand("crypto").setExecutor(new CryptoCommand());
         
         backpackManager = new BackpackManager();
 

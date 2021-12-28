@@ -65,9 +65,8 @@ public class OdysseyusHelpCommand implements CommandExecutor {
             inv.setItem(8, border);
 
             ((Player) sender).openInventory(inv);
-        }
 
+        }
         return true;
     }
-
 }

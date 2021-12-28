@@ -58,3 +58,9 @@ commands:
     description: donne l'équipement de journaliste
   odysseyus:
     description: ouvre le menu d'aide d'Odysseyus
+  vote:
+    description: vote
+  crypto:
+    description: donne de la crypto
+    permission: ody.perm.pl
+    permission-message: vous n'avez pas les permisson administrateur sur Odysseyus
