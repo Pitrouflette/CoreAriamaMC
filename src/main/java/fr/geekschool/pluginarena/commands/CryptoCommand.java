@@ -17,6 +17,8 @@ public class CryptoCommand implements CommandExecutor {
 
         if (sender instanceof Player){
 
+            Player player = (Player) sender;
+
             //ItemlStack CubeCoin
             ItemStack CubeCoin = new ItemStack(Material.SUNFLOWER);
             ItemMeta CubeCoinM = CubeCoin.getItemMeta();
@@ -28,7 +30,11 @@ public class CryptoCommand implements CommandExecutor {
                 sender.sendMessage("§4Veuillez présiser quelle Crypto-Monaie voulez vous recevoir : CubeCoin / ");
             }else if(args.length == 1){
                 if (args[0].equals("CubeCoin")){
-                    ((Player) sender).getInventory().addItem(CubeCoin);
+                    player.getInventory().addItem(CubeCoin);
+                }else if (args[0].equals("bourse")){
+
+                    player.sendMessage("Hey");
+
                 }
 
             }else{

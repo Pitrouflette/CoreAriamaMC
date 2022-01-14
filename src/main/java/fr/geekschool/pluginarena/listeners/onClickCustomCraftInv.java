@@ -198,7 +198,7 @@ public class onClickCustomCraftInv implements Listener {
 
             Player player = (Player) ev.getWhoClicked();
 
-            if (ev.getView().getTitle().contains("§3Pitrouflette")) {
+            if (ev.getView().getTitle().contains("Pitrouflette")) {
 
 
                 if (current != null) {

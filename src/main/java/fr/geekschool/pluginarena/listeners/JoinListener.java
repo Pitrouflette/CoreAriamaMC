@@ -13,5 +13,10 @@ public class JoinListener implements Listener {
 
         event.setJoinMessage("§7[§a+§7]" + event.getPlayer().getName());
 
+        String titel1 = "§c§l☬ §6§lAvariaMC§c§l ☬";
+        String titel2 = "§ePvP-Faction §6§lFarm2Win";
+
+        player.sendTitle(titel1, titel2);
+
     }
 }
