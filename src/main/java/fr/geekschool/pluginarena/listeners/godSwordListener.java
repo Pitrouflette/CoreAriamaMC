@@ -76,7 +76,7 @@ public class godSwordListener implements Listener {
                         ((Damageable) thisEnemy).setHealth(0);
                     }
                 }
-                player.sendMessage("§4vous avez éliminé :  §1" + enemyKilled+ " §4énemies");
+                player.sendMessage("§4vous avez éliminé :  §1" + enemyKilled + " §4énemies");
 
             } else {
                 //event.getPlayer().sendMessage("§4La colère liée au fait que vous n'avez pas eu de cadeaux monte en vous...");

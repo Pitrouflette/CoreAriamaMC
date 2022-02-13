@@ -1,28 +1,22 @@
-package fr.geekschool.pluginarena.listeners;
+package fr.geekschool.pluginarena.commands;
 
-import fr.geekschool.pluginarena.Main;
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.PrepareItemCraftEvent;
-import org.bukkit.inventory.CraftingInventory;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
-public class onCustomCraft implements Listener {
+public class FragCommand implements CommandExecutor {
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-    @EventHandler
-    public void onPlayerCraft(PrepareItemCraftEvent ev){
-        if(ev.getInventory().getMatrix().length > 9){
-            return;
-        }
 
         ItemStack CrystalsFrag = new ItemStack(Material.PRISMARINE_CRYSTALS);
         ItemMeta CrystalsFragM = CrystalsFrag.getItemMeta();
@@ -106,79 +100,21 @@ public class onCustomCraft implements Listener {
                 "§9--------------------"));
         CrystalsBoot.setItemMeta(CrystalsBootM);
 
-        ItemStack stick = new ItemStack(Material.STICK);
+        Player player = (Player) sender;
 
-        ItemStack Sharp = new ItemStack(Material.PRISMARINE_SHARD);
+        player.getInventory().addItem(CrystalsBoot);
+        player.getInventory().addItem(CrystalsHelmet);
+        player.getInventory().addItem(CrystalsCHestplate);
+        player.getInventory().addItem(CrystalsLegg);
+        player.getInventory().addItem(CrystalsIngot);
+        player.getInventory().addItem(CrystalsFrag);
 
-        checkCrat(new ItemStack(CrystalsIngot), ev.getInventory(), new HashMap<Integer, ItemStack>(){{
 
-            put(0, CrystalsFrag);
-            put(1, CrystalsFrag);
-            put(2, CrystalsFrag);
-            put(3, CrystalsFrag);
-            put(4, CrystalsFrag);
-            put(5, CrystalsFrag);
-            put(6, CrystalsFrag);
-            put(7, CrystalsFrag);
-            put(8, CrystalsFrag);
 
-        }});
 
-        checkCrat(new ItemStack(CrystalsHelmet), ev.getInventory(), new HashMap<Integer, ItemStack>(){{
-
-            put(0, CrystalsIngot);
-            put(1, CrystalsIngot);
-            put(2, CrystalsIngot);
-            put(3, CrystalsIngot);
-            put(5, CrystalsIngot);
-        }});
-
-        checkCrat(new ItemStack(CrystalsCHestplate), ev.getInventory(), new HashMap<Integer, ItemStack>(){{
-
-            put(0, CrystalsIngot);
-            put(2, CrystalsIngot);
-            put(3, CrystalsIngot);
-            put(4, CrystalsIngot);
-            put(5, CrystalsIngot);
-            put(6, CrystalsIngot);
-            put(7, CrystalsIngot);
-            put(8, CrystalsIngot);
-        }});
-
-        checkCrat(new ItemStack(CrystalsLegg), ev.getInventory(), new HashMap<Integer, ItemStack>(){{
-
-            put(0, CrystalsIngot);
-            put(1, CrystalsIngot);
-            put(2, CrystalsIngot);
-            put(3, CrystalsIngot);
-            put(5, CrystalsIngot);
-            put(6, CrystalsIngot);
-            put(8, CrystalsIngot);
-        }});
-
-        checkCrat(new ItemStack(CrystalsBoot), ev.getInventory(), new HashMap<Integer, ItemStack>(){{
-
-            put(3, CrystalsIngot);
-            put(5, CrystalsIngot);
-            put(6, CrystalsIngot);
-            put(8, CrystalsIngot);
-
-        }});
+        return true;
     }
 
-    public void checkCrat(ItemStack result, CraftingInventory inv, HashMap<Integer, ItemStack> ingredients){
-        ItemStack[] matrix = inv.getMatrix();
-        for(int i = 0; i < 9; i++){
-            if(ingredients.containsKey(i)){
-                if(matrix[i] == null || !matrix[i].equals(ingredients.get(i))){
-                    return;
-                }
-            } else {
-                if(matrix[i] != null){
-                    return;
-                }
-            }
-        }
-        inv.setResult(result);
-    }
+
+
 }

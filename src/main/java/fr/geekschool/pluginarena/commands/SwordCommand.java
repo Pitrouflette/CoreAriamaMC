@@ -21,7 +21,7 @@ public class SwordCommand implements CommandExecutor {
             Player payer = (Player) sender;
 
             //Item Sword Christmas
-            ItemStack Hotte = new ItemStack(Material.NETHERITE_SWORD);
+            ItemStack Hotte = new ItemStack(Material.DIAMOND_BOOTS);
             ItemMeta HotteMeta = Hotte.getItemMeta();
             HotteMeta.setDisplayName("§4Christmas §1Sword");
             HotteMeta.addEnchant(Enchantment.DAMAGE_ALL, 32000, true);

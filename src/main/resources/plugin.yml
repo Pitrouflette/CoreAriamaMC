@@ -1,67 +1,34 @@
 name: pluginArena
 main: fr.geekschool.pluginarena.Main
 version: 1.5.0
-description: plugin parfait pour es serveurs PvP faction (pas le plugin Faction)
+description: plugin Odysseyus
 author: GeekSchool
 
 commands:
-  #item-admin:
-  #  description: iuyff
-#
-  #pet:
-  #  description: ouvre le menu des pets
-#
-  #carte:
-  #  description: ouvre la carte
-#
-  #poubelle:
-  #  description: ouvre la poubelle
-#
-  #clear-hand:
-  #  description: clear l'item dans votre main
-#
-  #goulag:
-  #  description: téléprote le joueur indiqué au goulag
-  #  permission: ody.perm.pl
-  #  permission-message: vous n'avez pas les permisson administrateur sur Odysseyus
-#
-  #gift:
-  #  description: donne un cadeau
-  #  permission: ody.perm.pl
-  #  permission-message: vous n'avez pas les permisson administrateur sur Odysseyus
-#
-  #tete:
-  #  description: donne une tête
-  #  permission: ody.perm.pl
-  #  permission-message: vous n'avez pas les permisson administrateur sur Odysseyus
-#
-  #cadeau:
-  #  description: permet d'échanger les cadeaux récupérés contre divers récompenses
-#
-  #hotte:
-  #  description: ouvre un sac a dos
-  #  permission: ody.perm.pl
-#
-  #event:
-  #  escription: start the event {[<Event>]}
-  #  ermission: ody.perm.pl
-#
-  #sword:
-  #  description: vous donne l'objet spésifier TESSSTTT
-  #  permission: ody.perm.pl
-  #pitrouflette:
-  #  permission: ody.perm.pl
-#
-  #custom-craft:
-  #  description: ouvre une table de craft custom
-  #presse:
-  #  description: donne l'équipement de journaliste
-  #odysseyus:
-  #  description: ouvre le menu d'aide d'Odysseyus
-  #vote:
-  #  description: vote
-#
-  #crypto:
-  #  description: donne de la crypto
-  #  permission: ody.perm.pl
-  #  permission-message: vous n'avez pas les permisson administrateur sur Odysseyus
+
+  sword:
+    description: vous donne l'objet spésifier
+    permission: Ava.perm.admin
+  frag:
+    description: donne tt les objets custom
+    permission: Ava.perm.admin
+  hotte:
+    permission: Ava.perm.admin
+  cadeau:
+    description: cadeau
+  gift:
+    permission: Ava.perm.admin
+  tete:
+    description: command
+  clear-hand:
+    description: command
+  poubelle:
+    description: command
+  goulag:
+    description: command
+  event:
+    description: command
+  presse:
+    description: command
+  crypto:
+    description: command
