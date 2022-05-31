@@ -1,2 +1,0 @@
-# AriamaMC-Plugin
-Le plugin
