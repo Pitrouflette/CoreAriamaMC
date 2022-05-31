@@ -1,2 +1,1 @@
 # CoreAriamaMC
-CoreAriamaMC
