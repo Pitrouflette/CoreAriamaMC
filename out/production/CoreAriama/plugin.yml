@@ -1,0 +1,16 @@
+name: CoreAriama
+author: ChilDish
+version: 1.0
+main: fr.childish.coreariama.Main
+commands:
+  site:
+  poubelle:
+  vote:
+  discord:
+  epee:
+  healstick:
+  classement:
+  chassedragon:
+  hammer:
+  infinit-items:
+    permission: admin.ariama.items
